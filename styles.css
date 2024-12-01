@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    max-width: 400px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+	align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    min-width: 300px;
+}
+
+.main-column {
+    flex: 2; /* La columna del medio ocupa más espacio */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.column h3 {
+    margin-top: 10px;
+}
+
+.column p {
+    margin: 10px 0;
+}
+
+.column button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.column button:hover {
+    background-color: #0056b3;
+}
+
+.marketing-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.marketing-item i {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+#video {
+    text-align: center;
+    margin: 20px auto;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .column {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+
+    .main-column {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 400px; /* Ajusta el tamaño según sea necesario */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Aprendizaje Colaborativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="recurso/logo_plataforma.png" alt="Logo de la Plataforma" class="logo">
+        <h1>Plataforma de Aprendizaje Colaborativo</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#courses">Cursos</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+            <li><a href="#video">Video Demostrativo</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="column">
+            <section id="projects">
+                <h2>Proyectos Colaborativos</h2>
+                <div class="project">
+                    <img src="recurso/proyeccion_Tamare-GIF.GIF" alt="Proyecto 1">
+                    <h3>Proyecto Colaborativo Inicial</h3>
+                    <p>Desarrolla tus habilidades de comunicación efectiva en equipo. Aporta ideas.</p>
+                    <button onclick="joinProject('Proyecto Colaborativo Inicial')">Unirse al Proyecto</button>
+                </div>
+				<p></p>
+                <div class="project">
+                    <img src="recurso/lights-10627_512.GIF" alt="Proyecto 2">
+                    <h3>Implementación de Algoritmo Complejo</h3>
+                    <p>Trabaja en la implementación de un algoritmo complejo con tu equipo.</p>
+                    <button onclick="joinProject('Implementación de Algoritmo Complejo')">Unirse al Proyecto</button>
+                </div>
+				<p></p>
+            </section>
+        </div>
+        <div class="column main-column">
+            <section id="courses">
+                <h2>Cursos</h2>
+                <div class="course">
+                    <img src="recurso/desk-5020800_1280.jpg" alt="Curso 1">
+                    <h3>Fundamentos de Programación Colaborativa</h3>
+                    <p>Domina los conceptos básicos de programación colaborativa y aplica técnicas de trabajo en equipo.</p>
+                    <button onclick="startCourse('Fundamentos de Programación Colaborativa')">Comenzar Curso</button>
+                </div>
+				<p></p>
+                <div class="course">
+                    <img src="recurso/html-1832991_1280.png" alt="Curso 2">
+                    <h3>Programación Avanzada y Colaboración</h3>
+                    <p>Implementa algoritmos complejos en equipo y utiliza control de versiones.</p>
+                    <button onclick="startCourse('Programación Avanzada y Colaboración')">Comenzar Curso</button>
+                </div>
+				<p></p>
+            </section>
+        </div>
+        <div class="column">
+            <section id="marketing">
+                <h2>Información de Marketing</h2>
+                <div class="marketing-item"/div>
+				<div>
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Promociones Especiales</h3>
+                    <p>Descubre nuestras promociones y descuentos exclusivos para nuevos usuarios.</p>
+                </div>
+                <div class="marketing-item"/div>
+				<div>
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Estadísticas de Éxito</h3>
+                    <p>Conoce las estadísticas de éxito de nuestros cursos y proyectos colaborativos.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="video">
+        <h2>Multimedia del día...</h2>
+        <video controls loop autoplay>
+            <source src="recurso/navidad II.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Plataforma de Aprendizaje Colaborativo. Desarrollado por Ing. Lionell Nava</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
