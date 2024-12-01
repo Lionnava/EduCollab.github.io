@@ -123,6 +123,15 @@ video {
     border-radius: 10px;
 }
 
+.video-size {
+    width: 640px; /* Ajusta el ancho según sea necesario */
+    height: 360px; /* Ajusta la altura según sea necesario */
+    max-width: 100%; /* Hace que el video sea responsive */
+    border-radius: 10px; /* Opcional: Añade bordes redondeados */
+}
+
+
+
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
     .container {
