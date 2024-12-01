@@ -130,8 +130,6 @@ video {
     border-radius: 10px; /* Opcional: Añade bordes redondeados */
 }
 
-
-
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
     .container {
