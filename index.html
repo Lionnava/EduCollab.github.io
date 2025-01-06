@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCollab - Plataforma de Aprendizaje Colaborativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="recurso/logo_plataforma.png" alt="Logo de EduCollab" class="logo">
+        <h1>EduCollab - Plataforma de Aprendizaje Colaborativo</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#courses">Cursos</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#assistant">Asistente Virtual</a></li>
+            <li><a href="#video">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="column">
+            <section id="projects">
+                <h2>Proyectos Colaborativos</h2>
+                <div class="project">
+                    <img src="recurso/proyeccion_Tamare-GIF.gif" alt="Proyecto Colaborativo Inicial">
+                    <h3>Proyecto Colaborativo Inicial</h3>
+                    <p>Desarrolla tus habilidades de comunicación efectiva en equipo. Aporta ideas.</p>
+                    <button onclick="joinProject('Proyecto Colaborativo Inicial')">Unirse al Proyecto</button>
+                </div>
+                <div class="project">
+                    <img src="recurso/lights-10627_512.gif" alt="Implementación de Algoritmo Complejo">
+                    <h3>Implementación de Algoritmo Complejo</h3>
+                    <p>Trabaja en la implementación de un algoritmo complejo con tu equipo.</p>
+                    <button onclick="joinProject('Implementación de Algoritmo Complejo')">Unirse al Proyecto</button>
+                </div>
+            </section>
+        </div>
+        <div class="column main-column">
+            <section id="courses">
+                <h2>Cursos</h2>
+                <div class="course">
+                    <img src="recurso/desk-5020800_1280.jpg" alt="Fundamentos de Programación Colaborativa">
+                    <h3>Fundamentos de Programación Colaborativa</h3>
+                    <p>Domina los conceptos básicos de programación colaborativa y aplica técnicas de trabajo en equipo.</p>
+                    <button onclick="startCourse('Fundamentos de Programación Colaborativa')">Comenzar Curso</button>
+                </div>
+                <div class="course">
+                    <img src="recurso/html-1832991_1280.png" alt="Programación Avanzada y Colaboración">
+                    <h3>Programación Avanzada y Colaboración</h3>
+                    <p>Implementa algoritmos complejos en equipo y utiliza control de versiones.</p>
+                    <button onclick="startCourse('Programación Avanzada y Colaboración')">Comenzar Curso</button>
+                </div>
+            </section>
+        </div>
+        <div class="column">
+            <section id="assistant">
+                <h2>Asistente Virtual</h2>
+                <div class="chatbot">
+                    <div id="chat-messages"></div>
+                    <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+                    <button onclick="sendMessage()">Enviar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="video">
+        <h2>Multimedia del día...</h2>
+        <video controls loop autoplay class="video-size">
+            <source src="recurso/navidad II.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </section>
+
+    <footer>
+        <p>&copy; 2024-2025 EduCollab. Desarrollado por Ing. Lionell Nava. Derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
