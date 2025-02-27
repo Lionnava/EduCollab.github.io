@@ -148,3 +148,48 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
+/* Estilos para la sección de Noticias Tecnológicas */
+#tech-news {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.news-container h2 {
+    font-size: 1.5rem;
+    color: #3182ce;
+    margin-bottom: 1rem;
+}
+
+.news-item {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+}
+
+.news-item p {
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #3182ce;
+    font-weight: 600;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
