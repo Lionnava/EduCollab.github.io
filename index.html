@@ -75,14 +75,21 @@
     </main>
 
     <!-- Sección Multimedia -->
-    <section id="video" class="video-section">
-        <h2>Multimedia del día... Cortesía Kodemia Mx</h2>
-        <video controls loop autoplay muted class="video-size">
-            <source src="https://www.youtube.com/watch?v=1shE4lFZeZk" type="video/mp4">
-            Tu navegador no soporta la reproducción de video.
-        </video>
-    </section>
-
+   <section id="video" class="video-section">
+    <h2>Multimedia del día... Cortesía Kodemia Mx</h2>
+    <div class="video-container">
+        <!-- Usar iframe para incrustar el video de YouTube -->
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/1shE4lFZeZk" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
     <footer class="site-footer">
         <p>&copy; 2024-2025 EduCollab. Desarrollado por Ing. Lionell Nava. Todos los derechos reservados.</p>
     </footer>
