@@ -1,142 +1,107 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+/* Estilos Globales */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    width: 100%;
-    text-align: center;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-top: 10px;
 }
 
 .logo {
-    max-width: 400px;
+    max-width: 200px;
     height: auto;
-    align: center;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+    list-style: none;
 }
 
 nav ul li a {
-    color: #cb3234;
     text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #2575fc;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
 }
 
 .column {
-    flex: 1;
-    margin: 10px;
-    min-width: 300px;
-}
-
-.main-column {
-    flex: 2;
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.column img {
     width: 100%;
-    border-radius: 10px;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.column h3 {
-    margin-top: 10px;
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.column p {
-    margin: 10px 0;
+.column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2575fc;
 }
 
-.column button {
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.project img, .course img {
     width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.column button:hover {
-    background-color: #0056b3;
-}
-
-.marketing-item {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.marketing-item i {
-    font-size: 2em;
-    margin-right: 10px;
-}
-
-footer {
-    background-color: #007bff;
+button {
+    background: #2575fc;
     color: white;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-#video {
-    text-align: center;
-    margin: 20px auto;
-}
-
-video {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.video-size {
-    width: 640px;
-    height: 360px;
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* Estilos para el Asistente Virtual */
-#assistant {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+button:hover {
+    background: #1c5bbd;
 }
 
 .chatbot {
@@ -146,49 +111,40 @@ video {
 }
 
 #chat-messages {
-    height: 200px;
-    overflow-y: scroll;
+    height: 150px;
     border: 1px solid #ccc;
-    padding: 10px;
     border-radius: 5px;
-    background: #fff;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f9f9f9;
 }
 
 #chat-input {
+    flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 1200px) {
-    .container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .column {
-        min-width: 100%;
-        margin: 10px 0;
-    }
-
-    .main-column {
-        flex: 1;
-    }
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        padding: 10px;
-    }
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+}
 
-    .logo {
-        max-width: 100%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+footer {
+    background: #2575fc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
