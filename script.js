@@ -1,23 +1,26 @@
-// Funcionalidad para cursos y proyectos
-function startCourse(courseName) {
-    alert(`Estamos adecuando el curso: ${courseName}`);
-}
-
+// Función para unirse a un proyecto
 function joinProject(projectName) {
-    alert(`Estamos adecuando el proyecto: ${projectName}`);
+    alert(`Te has unido al proyecto: ${projectName}`);
 }
 
-// Funcionalidad del Asistente Virtual
+// Función para comenzar un curso
+function startCourse(courseName) {
+    alert(`Has comenzado el curso: ${courseName}`);
+}
+
+// Función para enviar mensajes en el chat
 function sendMessage() {
-    const input = document.getElementById('chat-input');
-    const message = input.value;
-    input.value = '';
+    const input = document.getElementById("chat-input");
+    const message = input.value.trim();
 
-    const chatMessages = document.getElementById('chat-messages');
-    chatMessages.innerHTML += `<div><strong>Tú:</strong> ${message}</div>`;
-
-    // Simulación de respuesta del asistente virtual
-    setTimeout(() => {
-        chatMessages.innerHTML += `<div><strong>Asistente:</strong> Hola, ¿en qué puedo ayudarte?</div>`;
-    }, 1000);
+    if (message) {
+        const chatMessages = document.getElementById("chat-messages");
+        const newMessage = document.createElement("div");
+        newMessage.textContent = `Tú: ${message}`;
+        chatMessages.appendChild(newMessage);
+        input.value = "";
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll automático
+    } else {
+        alert("Por favor, escribe un mensaje antes de enviar.");
+    }
 }
