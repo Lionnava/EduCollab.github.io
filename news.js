@@ -1,6 +1,6 @@
 // Función para obtener noticias tecnológicas usando NewsAPI
 async function fetchTechNews() {
-    const apiKey = "TU_CLAVE_DE_API_AQUI"; // Reemplaza con tu clave de API
+    const apiKey = "e372e14e62da4c01a5f6ad6c79d27549"; // Reemplaza con tu clave de API
     const url = `https://newsapi.org/v2/top-headlines?category=technology&language=es&apiKey=${apiKey}`;
 
     try {
