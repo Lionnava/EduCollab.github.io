@@ -82,6 +82,7 @@ nav ul li a:hover {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #2575fc;
+    justify-content: center;
 }
 
 .project img, .course img {
