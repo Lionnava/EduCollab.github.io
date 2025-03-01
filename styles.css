@@ -13,7 +13,7 @@ body {
 }
 header {
     position: relative;
-    background-image: url('imagenes/fondo-header.jpg');
+    background-image: url('recursos/logo_plataforma.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
