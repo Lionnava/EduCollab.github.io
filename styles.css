@@ -12,11 +12,31 @@ body {
     line-height: 1.6;
 }
 header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    position: relative;
+    background-image: url('imagenes/fondo-header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima del fondo semitransparente */
 }
 
 header h1 {
