@@ -1,111 +1,368 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EduCollab - Plataforma de Aprendizaje Colaborativo">
     <meta name="author" content="Ing. Lionell Nava">
+    <meta name="keywords" content="aprendizaje, colaborativo, cursos, programación, educación">
+    <meta property="og:title" content="EduCollab - Plataforma de Aprendizaje Colaborativo">
+    <meta property="og:description" content="Plataforma innovadora para aprendizaje colaborativo en tecnología">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://educollab.example.com">
     <title>EduCollab - Plataforma de Aprendizaje Colaborativo</title>
-    <h1>Nuestro centro de Entrenamiento Intensivo</h1>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="recurso/favicon.png">
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Preconexión para mejorar performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Favicon moderno (incluyendo múltiples formatos) -->
+    <link rel="icon" href="recurso/favicon.ico" sizes="any">
+    <link rel="icon" href="recurso/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="recurso/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- CSS moderno con módulos -->
+    <link rel="stylesheet" href="css/main.min.css">
+    
+    <!-- Font Awesome optimizado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" />
+    
+    <!-- Fuentes de Google optimizadas -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap">
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
     <!-- Header -->
-    <header>
-        <h1>EduCollab - Plataforma de Aprendizaje Colaborativo</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <h1 class="header__title">
+                    <span class="visually-hidden">EduCollab</span>
+                    <svg class="header__logo-icon" aria-hidden="true">
+                        <use xlink:href="recurso/sprite.svg#logo"></use>
+                    </svg>
+                </h1>
+            </div>
+            
+            <!-- Navegación principal -->
+            <nav class="nav" aria-label="Navegación principal">
+                <button class="nav__toggle" aria-expanded="false" aria-label="Menú">
+                    <span class="nav__toggle-icon"></span>
+                </button>
+                
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#courses" class="nav__link" data-active="false">
+                            <i class="fas fa-book-open nav__icon" aria-hidden="true"></i>
+                            <span>Cursos</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link" data-active="false">
+                            <i class="fas fa-project-diagram nav__icon" aria-hidden="true"></i>
+                            <span>Proyectos</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#assistant" class="nav__link" data-active="false">
+                            <i class="fas fa-robot nav__icon" aria-hidden="true"></i>
+                            <span>Asistente</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#video" class="nav__link" data-active="false">
+                            <i class="fas fa-video nav__icon" aria-hidden="true"></i>
+                            <span>Multimedia</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <!-- Navegación -->
-    <nav>
-        <ul>
-            <li><a href="#courses">Cursos</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#assistant">Asistente Virtual</a></li>
-            <li><a href="#video">Multimedia</a></li>
-        </ul>
-    </nav>
-
     <!-- Contenido Principal -->
-    <main class="container">
-        <!-- Proyectos -->
-        <section class="column" id="projects">
-            <h2>Proyectos Colaborativos</h2>
-            <article class="project">
-                <img src="recurso/proyeccion_Tamare-GIF.gif" alt="Proyecto Colaborativo Inicial">
-                <h3>Proyecto Colaborativo Inicial</h3>
-                <p>Desarrolla tus habilidades de comunicación efectiva en equipo. Aporta ideas.</p>
-                <button onclick="joinProject('Proyecto Colaborativo Inicial')">Unirse al Proyecto</button>
-            </article>
-            <article class="project">
-                <img src="recurso/lights-10627_512.gif" alt="Implementación de Algoritmo Complejo">
-                <h3>Implementación de Algoritmo Complejo</h3>
-                <p>Trabaja en la implementación de un algoritmo complejo con tu equipo.</p>
-                <button onclick="joinProject('Implementación de Algoritmo Complejo')">Unirse al Proyecto</button>
-            </article>
-        </section>
-
-        <!-- Cursos -->
-        <section class="column main-column" id="courses">
-            <h2>Cursos</h2>
-            <article class="course">
-                <img src="recurso/desk-5020800_1280.jpg" alt="Fundamentos de Programación Colaborativa">
-                <h3>Fundamentos de Programación Colaborativa</h3>
-                <p>Domina los conceptos básicos de programación colaborativa y aplica técnicas de trabajo en equipo.</p>
-                <button onclick="startCourse('Fundamentos de Programación Colaborativa')">Comenzar Curso</button>
-            </article>
-            <article class="course">
-                <img src="recurso/html-1832991_1280.png" alt="Programación Avanzada y Colaboración">
-                <h3>Programación Avanzada y Colaboración</h3>
-                <p>Implementa algoritmos complejos en equipo y utiliza control de versiones.</p>
-                <button onclick="startCourse('Programación Avanzada y Colaboración')">Comenzar Curso</button>
-            </article>
-        </section>
-        <section class="column" id="assistant">
-    <h2>Asistente Virtual</h2>
-    <div class="chatbot">
-        <div id="chat-messages"></div>
-        <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
-        <button onclick="sendMessage()">Enviar</button>
-    </div>
-
-    <!-- Nueva Sección: Noticias Tecnológicas -->
-    <h2>Noticias Tecnológicas</h2>
-    <div id="tech-news" class="news-container">
-        <!-- Las noticias se cargarán aquí dinámicamente -->
-        <p>Cargando noticias...</p>
-    </div>
-</section>
+    <main id="main-content" class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero__content">
+                    <h2 class="hero__title">Nuestro centro de Entrenamiento Intensivo</h2>
+                    <p class="hero__subtitle">Aprende, colabora y crece con nuestra plataforma de aprendizaje colaborativo</p>
+                    <div class="hero__cta">
+                        <button class="btn btn--primary">Explorar cursos</button>
+                        <button class="btn btn--secondary">Ver proyectos</button>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="recurso/hero-image.webp" alt="Estudiantes colaborando" loading="lazy" width="600" height="400">
+                </div>
+            </section>
+            
+            <!-- Cursos -->
+            <section id="courses" class="section" aria-labelledby="courses-heading">
+                <div class="section__header">
+                    <h2 id="courses-heading" class="section__title">Cursos</h2>
+                    <p class="section__subtitle">Domina nuevas habilidades con nuestros cursos interactivos</p>
+                </div>
+                
+                <div class="grid">
+                    <article class="card course">
+                        <div class="card__image">
+                            <img src="recurso/desk-5020800_1280.jpg" 
+                                 alt="Fundamentos de Programación Colaborativa" 
+                                 loading="lazy"
+                                 width="400"
+                                 height="225">
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Fundamentos de Programación Colaborativa</h3>
+                            <p class="card__text">Domina los conceptos básicos de programación colaborativa y aplica técnicas de trabajo en equipo.</p>
+                            <div class="card__meta">
+                                <span class="badge badge--beginner">Principiante</span>
+                                <span class="duration">4 semanas</span>
+                            </div>
+                            <button class="btn btn--block" onclick="startCourse('Fundamentos de Programación Colaborativa')">
+                                Comenzar Curso
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <article class="card course">
+                        <div class="card__image">
+                            <img src="recurso/html-1832991_1280.png" 
+                                 alt="Programación Avanzada y Colaboración" 
+                                 loading="lazy"
+                                 width="400"
+                                 height="225">
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Programación Avanzada y Colaboración</h3>
+                            <p class="card__text">Implementa algoritmos complejos en equipo y utiliza control de versiones.</p>
+                            <div class="card__meta">
+                                <span class="badge badge--advanced">Avanzado</span>
+                                <span class="duration">6 semanas</span>
+                            </div>
+                            <button class="btn btn--block" onclick="startCourse('Programación Avanzada y Colaboración')">
+                                Comenzar Curso
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Proyectos -->
+            <section id="projects" class="section" aria-labelledby="projects-heading">
+                <div class="section__header">
+                    <h2 id="projects-heading" class="section__title">Proyectos Colaborativos</h2>
+                    <p class="section__subtitle">Únete a proyectos reales y gana experiencia práctica</p>
+                </div>
+                
+                <div class="grid">
+                    <article class="card project">
+                        <div class="card__image">
+                            <img src="recurso/proyeccion_Tamare-GIF.gif" 
+                                 alt="Proyecto Colaborativo Inicial" 
+                                 loading="lazy"
+                                 width="400"
+                                 height="225">
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Proyecto Colaborativo Inicial</h3>
+                            <p class="card__text">Desarrolla tus habilidades de comunicación efectiva en equipo. Aporta ideas.</p>
+                            <div class="card__meta">
+                                <span class="badge badge--team">Equipo</span>
+                                <span class="members">5 participantes</span>
+                            </div>
+                            <button class="btn btn--block" onclick="joinProject('Proyecto Colaborativo Inicial')">
+                                Unirse al Proyecto
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <article class="card project">
+                        <div class="card__image">
+                            <img src="recurso/lights-10627_512.gif" 
+                                 alt="Implementación de Algoritmo Complejo" 
+                                 loading="lazy"
+                                 width="400"
+                                 height="225">
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Implementación de Algoritmo Complejo</h3>
+                            <p class="card__text">Trabaja en la implementación de un algoritmo complejo con tu equipo.</p>
+                            <div class="card__meta">
+                                <span class="badge badge--tech">Tecnología</span>
+                                <span class="members">3 participantes</span>
+                            </div>
+                            <button class="btn btn--block" onclick="joinProject('Implementación de Algoritmo Complejo')">
+                                Unirse al Proyecto
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Asistente Virtual -->
+            <section id="assistant" class="section" aria-labelledby="assistant-heading">
+                <div class="section__header">
+                    <h2 id="assistant-heading" class="section__title">Asistente Virtual</h2>
+                    <p class="section__subtitle">Obtén ayuda instantánea con nuestro asistente AI</p>
+                </div>
+                
+                <div class="chatbot">
+                    <div class="chatbot__header">
+                        <h3 class="chatbot__title">Asistente EduCollab</h3>
+                        <div class="chatbot__status">
+                            <span class="status-indicator status-indicator--online"></span>
+                            <span>En línea</span>
+                        </div>
+                    </div>
+                    
+                    <div id="chat-messages" class="chatbot__messages" role="log" aria-live="polite"></div>
+                    
+                    <div class="chatbot__input">
+                        <input type="text" 
+                               id="chat-input" 
+                               class="input" 
+                               placeholder="Escribe tu mensaje..." 
+                               aria-label="Mensaje para el asistente">
+                        <button class="btn btn--icon" onclick="sendMessage()" aria-label="Enviar mensaje">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Noticias Tecnológicas -->
+            <section class="section" aria-labelledby="news-heading">
+                <div class="section__header">
+                    <h2 id="news-heading" class="section__title">Noticias Tecnológicas</h2>
+                    <p class="section__subtitle">Mantente actualizado con las últimas tendencias</p>
+                </div>
+                
+                <div id="tech-news" class="news-container" aria-busy="true">
+                    <div class="skeleton-loader">
+                        <div class="skeleton-item"></div>
+                        <div class="skeleton-item"></div>
+                        <div class="skeleton-item"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Multimedia -->
+            <section id="video" class="section" aria-labelledby="video-heading">
+                <div class="section__header">
+                    <h2 id="video-heading" class="section__title">Multimedia del día</h2>
+                    <p class="section__subtitle">Cortesía Kodemia Mx</p>
+                </div>
+                
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/1shE4lFZeZk" 
+                            title="Video educativo de Kodemia Mx" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            loading="lazy"
+                            class="video-iframe">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <!-- Multimedia -->
-    <section id="video">
-        <h2>Multimedia del día... Cortesía Kodemia Mx</h2>
-        <div class="video-container">
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/1shE4lFZeZk" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024-2025 EduCollab. Desarrollado por Ing. Lionell Nava. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <svg class="footer__logo" aria-hidden="true">
+                        <use xlink:href="recurso/sprite.svg#logo"></use>
+                    </svg>
+                    <p class="footer__tagline">Aprendizaje colaborativo para el futuro</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3 class="footer__title">Explorar</h3>
+                        <ul class="footer__list">
+                            <li><a href="#courses" class="footer__link">Cursos</a></li>
+                            <li><a href="#projects" class="footer__link">Proyectos</a></li>
+                            <li><a href="#assistant" class="footer__link">Asistente</a></li>
+                            <li><a href="#video" class="footer__link">Multimedia</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3 class="footer__title">Legal</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Términos</a></li>
+                            <li><a href="#" class="footer__link">Privacidad</a></li>
+                            <li><a href="#" class="footer__link">Cookies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h3 class="footer__title">Contacto</h3>
+                        <ul class="footer__list">
+                            <li><a href="mailto:info@educollab.example.com" class="footer__link">Email</a></li>
+                            <li><a href="tel:+1234567890" class="footer__link">Teléfono</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__social">
+                    <h3 class="footer__title">Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2024-2025 EduCollab. Desarrollado por Ing. Lionell Nava. Todos los derechos reservados.
+                </p>
+                <div class="footer__language">
+                    <select class="language-select" aria-label="Seleccionar idioma">
+                        <option value="es" selected>Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- Script JavaScript -->
-    <script src="script.js" defer></script>
-    <!-- Script para cargar noticias -->
-    <script src="news.js"></script>
+    <!-- Scripts modernos con defer y module -->
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/chatbot.js" type="module" defer></script>
+    <script src="js/news.js" type="module" defer></script>
+    
+    <!-- Polyfills para navegadores antiguos -->
+    <script nomodule src="js/polyfills.js" defer></script>
 </body>
 </html>
