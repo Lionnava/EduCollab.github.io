@@ -615,3 +615,71 @@ img {
         opacity: 0;
     }
 }
+/* Estilos para el header con imagen de fondo */
+.header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 2rem 0;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.header__hero {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: auto 0;
+    padding: 4rem 0;
+}
+
+.header__hero-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header__hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header__cta {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Ajustes para modo oscuro */
+[data-theme="dark"] .header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('recurso/header-bg.jpg');
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        min-height: 80vh;
+        text-align: center;
+    }
+    
+    .header__hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .header__cta {
+        flex-direction: column;
+    }
+}
