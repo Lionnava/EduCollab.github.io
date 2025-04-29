@@ -38,56 +38,68 @@
     <!-- Skip link para accesibilidad -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     
-    <!-- Header -->
-    <header class="header">
+    <!-- Header con imagen de fondo -->
+    <header class="header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('recurso/header-bg.jpg')">
         <div class="container">
-            <div class="header__logo">
-                <h1 class="header__title">
-                    <span class="visually-hidden">EduCollab</span>
-                    <svg class="header__logo-icon" aria-hidden="true">
-                        <use xlink:href="recurso/sprite.svg#logo"></use>
-                    </svg>
-                </h1>
+            <div class="header__content">
+                <div class="header__logo">
+                    <h1 class="header__title">
+                        <span class="visually-hidden">EduCollab</span>
+                        <svg class="header__logo-icon" aria-hidden="true">
+                            <use xlink:href="recurso/sprite.svg#logo"></use>
+                        </svg>
+                    </h1>
+                </div>
+                
+                <!-- Navegación principal -->
+                <nav class="nav" aria-label="Navegación principal">
+                    <button class="nav__toggle" aria-expanded="false" aria-label="Menú">
+                        <span class="nav__toggle-icon"></span>
+                    </button>
+                    
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#courses" class="nav__link" data-active="false">
+                                <i class="fas fa-book-open nav__icon" aria-hidden="true"></i>
+                                <span>Cursos</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link" data-active="false">
+                                <i class="fas fa-project-diagram nav__icon" aria-hidden="true"></i>
+                                <span>Proyectos</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#assistant" class="nav__link" data-active="false">
+                                <i class="fas fa-robot nav__icon" aria-hidden="true"></i>
+                                <span>Asistente</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#video" class="nav__link" data-active="false">
+                                <i class="fas fa-video nav__icon" aria-hidden="true"></i>
+                                <span>Multimedia</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header__actions">
+                    <button class="theme-toggle" aria-label="Cambiar tema">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
             
-            <!-- Navegación principal -->
-            <nav class="nav" aria-label="Navegación principal">
-                <button class="nav__toggle" aria-expanded="false" aria-label="Menú">
-                    <span class="nav__toggle-icon"></span>
-                </button>
-                
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#courses" class="nav__link" data-active="false">
-                            <i class="fas fa-book-open nav__icon" aria-hidden="true"></i>
-                            <span>Cursos</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#projects" class="nav__link" data-active="false">
-                            <i class="fas fa-project-diagram nav__icon" aria-hidden="true"></i>
-                            <span>Proyectos</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#assistant" class="nav__link" data-active="false">
-                            <i class="fas fa-robot nav__icon" aria-hidden="true"></i>
-                            <span>Asistente</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#video" class="nav__link" data-active="false">
-                            <i class="fas fa-video nav__icon" aria-hidden="true"></i>
-                            <span>Multimedia</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <div class="header__actions">
-                <button class="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon" aria-hidden="true"></i>
-                </button>
+            <!-- Texto hero en el header -->
+            <div class="header__hero">
+                <h2 class="header__hero-title">Nuestro centro de Entrenamiento Intensivo</h2>
+                <p class="header__hero-subtitle">Aprende, colabora y crece con nuestra plataforma de aprendizaje colaborativo</p>
+                <div class="header__cta">
+                    <button class="btn btn--primary">Explorar cursos</button>
+                    <button class="btn btn--secondary">Ver proyectos</button>
+                </div>
             </div>
         </div>
     </header>
@@ -95,21 +107,6 @@
     <!-- Contenido Principal -->
     <main id="main-content" class="main">
         <div class="container">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero__content">
-                    <h2 class="hero__title">Nuestro centro de Entrenamiento Intensivo</h2>
-                    <p class="hero__subtitle">Aprende, colabora y crece con nuestra plataforma de aprendizaje colaborativo</p>
-                    <div class="hero__cta">
-                        <button class="btn btn--primary">Explorar cursos</button>
-                        <button class="btn btn--secondary">Ver proyectos</button>
-                    </div>
-                </div>
-                <div class="hero__image">
-                    <img src="recurso/hero-image.webp" alt="Estudiantes colaborando" loading="lazy" width="600" height="400">
-                </div>
-            </section>
-            
             <!-- Cursos -->
             <section id="courses" class="section" aria-labelledby="courses-heading">
                 <div class="section__header">
